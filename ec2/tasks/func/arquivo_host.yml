@@ -1,5 +1,5 @@
 - name: Adicionando a instancia criada no arquivo hosts
-  local_action: lineinfile #adicionando os ips ao arquivo de hosts
+  local_action: lineinfile
     dest="./hosts"
     regexp={{ item.public_ip }}
     insertafter="[maquinasGIL]" line={{ item.public_ip }}
