@@ -1,0 +1,8 @@
+---
+# vars file for ec2
+instance_type: #colocar se é uma t2,c1 ... 
+security_group: #nome do grupo
+image: #imagem da maquina
+keypair: #nome da keypair criada 
+region: #regiao em que vai criar as instancias
+count: #quantidade de intancias
