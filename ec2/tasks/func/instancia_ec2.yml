@@ -1,0 +1,10 @@
+- name: Criando a instancia EC2
+  local_action: ec2
+    group={{ security_group }}
+    instance_type={{ instance_type }}
+    image={{ image }}
+    wait=true
+    region={{ region }}
+    keypair={{ keypair }}
+    count={{ count }}
+  register: ec2 #adicionando as variaveis e registrando os dados das maquinas

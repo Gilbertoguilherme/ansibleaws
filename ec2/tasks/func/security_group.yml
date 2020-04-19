@@ -1,0 +1,15 @@
+- name: Criando o Security Group
+  local_action:
+    module: ec2_group #modulo pra comunicacao com aws
+    name: "{{ security_group }}"
+    description: Security Group Gil
+    region: "{{ region }}"
+    rules:
+    - proto: tcp
+      from_port: 22
+      to_port: 22
+      cidr_ip: 0.0.0.0/0
+    rules_egress:
+    - proto: all
+      cidr_ip: 0.0.0.0/0
+  register: basic_firewall
